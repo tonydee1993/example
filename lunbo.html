@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播demo</title>
+    <style>
+        #div1{
+            margin: 300px auto;
+            width: 600px;
+            height: 320px;
+        }
+        img{
+            float: left;
+            display: none;
+        }
+        #div2{
+            width: 300px;
+            height: 150px;
+            margin: -300px auto;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+
+            var pic = document.getElementsByTagName('img');
+            var b=document.getElementById('btn1');
+            var c=document.getElementById('btn2');
+//            var d=document.getElementById('div2').getElementsByTagName('input');
+            var i = 0;
+            b.onclick=function(){
+//                    if (pic[i].style.display=='block')
+//                    {
+//                        //alert('第'+i+'张'+'外显图');
+//                        pic[i].style.display='none';
+//                        d[i].checked = false;
+//                        if(i>2){
+//                            pic[0].style.display='block';
+//                            d[0].checked = true;
+//                        }
+//                        else {pic[i+1].style.display='block';
+//                        d[i+1].checked = true;}
+//                    }
+//                    i++;
+//                    //alert('i加完是'+i);
+//                    if(i>3){
+//                        i=0;
+//                        //alert('i归零');
+//                    }
+                pic[i].style.display='none';
+                i++;
+                if(i>3){
+                    i=0;
+                }
+                pic[i].style.display='block';
+
+            }
+            c.onclick=function(){
+//                alert(i);
+//                    if (pic[i].style.display=='block')
+//                    {
+//                        //alert('第'+i+'张'+'外显图');
+//                        pic[i].style.display='none';
+//                        d[i].checked = false;
+//                        if(i<1){
+//                            pic[3].style.display='block';
+//                            d[3].checked = true;
+//                        }
+//                        else {pic[i-1].style.display='block';
+//                            d[i-1].checked = true;}
+//                    }
+//                    i--;
+//                   // alert('i减完是'+i);
+//                    if(i<0){
+//                        i=i+4;
+//                        //alert('i归3');
+//                    }
+                pic[i].style.display='none';
+                i--;
+                if(i<0){
+                    i=3;
+                }
+                pic[i].style.display='block';
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <input id="btn2" type="button" value="left"/>
+    <img src="图片轮播/images/1.jpg" alt="" style="display: block">
+    <img src="图片轮播/images/2.jpg" alt="" style="display: none">
+    <img src="图片轮播/images/3.jpg" alt="" style="display: none">
+    <img src="图片轮播/images/4.jpg" alt="" style="display: none">
+    <input id="btn1" type="button" value="right"/>
+</div>
+<!--<div id="div2">-->
+    <!--<input type="radio" checked>-->
+    <!--<input type="radio" >-->
+    <!--<input type="radio" >-->
+    <!--<input type="radio" >-->
+<!--</div>-->
+</body>
+</html>
